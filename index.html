@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umail - Richiedilo Ora</title>
+    
+    <!-- SEO: Title ottimizzato (58 caratteri) -->
+    <title>Estrattore Email con Rimozione Duplicati | Umail</title>
+    
+    <!-- SEO: Meta description (158 caratteri) -->
+    <meta name="description" content="Umail estrae email da PDF, Excel, CSV, JSON, TXT, URL e intere cartelle. Rimuovi e ripristina i duplicati con un click. Esporta in CSV, TXT o JSON.">
+    
+    <!-- SEO: Canonical -->
+    <link rel="canonical" href="https://therosediamond.github.io/mailextractor/">
+    
+    <!-- Open Graph per social -->
+    <meta property="og:title" content="Umail - Estrattore Email con Rimozione Duplicati">
+    <meta property="og:description" content="Estrai email da PDF, Excel, CSV, JSON, TXT, URL e cartelle. Rimuovi duplicati con un click.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://therosediamond.github.io/mailextractor/">
+    <meta property="og:image" content="https://therosediamond.github.io/mailextractor/Emailextractor.png">
+    
     <style>
         /* Reset e Stili Base (Stile Apple) */
         * {
@@ -12,7 +28,6 @@
             box-sizing: border-box;
         }
 
-        /* Abilita lo scroll fluido nativo */
         html {
             scroll-behavior: smooth;
         }
@@ -25,7 +40,6 @@
             width: 100%;
         }
 
-        /* Contenitore Globale */
         .page-wrapper {
             width: 100%;
             display: flex;
@@ -33,7 +47,7 @@
             align-items: center;
         }
 
-        /* Barra di Navigazione Minimal */
+        /* Barra di Navigazione */
         .navbar {
             width: 100%;
             height: 48px;
@@ -66,7 +80,7 @@
             font-weight: 500;
         }
 
-        /* Contenitore Principale (Hero Section) */
+        /* Hero */
         .hero {
             margin-top: 120px;
             text-align: center;
@@ -96,7 +110,6 @@
             margin-bottom: 32px;
         }
 
-        /* Pulsante di Scroll */
         .scroll-btn {
             background-color: #0071e3;
             color: #ffffff;
@@ -115,13 +128,13 @@
             background-color: #0077ed;
         }
 
-        /* Contenitore Immagine GUI con effetto Mac */
+        /* Mockup GUI */
         .gui-container {
             width: 100%;
             max-width: 900px;
             background: #ffffff;
             border-radius: 12px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08), 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08),
                         0 1px 3px rgba(0, 0, 0, 0.04);
             border: 1px solid rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -154,6 +167,93 @@
             display: block;
         }
 
+        /* NUOVA SEZIONE CONTENUTO (SEO) */
+        .content-section {
+            width: 100%;
+            max-width: 780px;
+            padding: 60px 24px;
+            margin: 0 auto;
+        }
+
+        .content-section h2 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+            margin-top: 48px;
+            color: #1d1d1f;
+        }
+
+        .content-section h2:first-child {
+            margin-top: 0;
+        }
+
+        .content-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 24px;
+            color: #1d1d1f;
+        }
+
+        .content-section p,
+        .content-section li {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #424245;
+            margin-bottom: 14px;
+        }
+
+        .content-section ul,
+        .content-section ol {
+            margin-left: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content-section li {
+            margin-bottom: 8px;
+        }
+
+        .author-box {
+            background-color: #f5f5f7;
+            padding: 20px 24px;
+            border-radius: 12px;
+            font-size: 15px;
+            color: #424245;
+            margin: 40px 0;
+            line-height: 1.5;
+        }
+
+        .author-box strong {
+            color: #1d1d1f;
+        }
+
+        .author-box a {
+            color: #0071e3;
+            text-decoration: none;
+        }
+
+        .author-box a:hover {
+            text-decoration: underline;
+        }
+
+        .date-line {
+            font-size: 13px;
+            color: #86868b;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+
+        .faq-item {
+            border-top: 1px solid #d2d2d7;
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: 1px solid #d2d2d7;
+        }
+
         /* SEZIONE BLU SCURO PER IL FORM */
         .dark-section {
             width: 100vw;
@@ -181,7 +281,6 @@
             line-height: 1.4;
         }
 
-        /* Form con codifica URL esplicita e corretta */
         .elegant-form {
             width: 100%;
             max-width: 400px;
@@ -232,7 +331,6 @@
             background-color: rgba(255, 255, 255, 0.12);
         }
 
-        /* Pulsante di Invio */
         .submit-btn {
             width: 100%;
             background-color: #0071e3;
@@ -251,6 +349,17 @@
             background-color: #0077ed;
         }
 
+        .alt-contact {
+            color: #b0c4de;
+            font-size: 14px;
+            margin-top: 24px;
+        }
+
+        .alt-contact a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
@@ -261,8 +370,26 @@
             .subtitle { font-size: 20px; }
             .hero { margin-top: 90px; }
             .dark-section h2 { font-size: 26px; }
+            .content-section h2 { font-size: 26px; }
         }
     </style>
+
+    <!-- SEO: Schema.org SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Umail",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Windows, macOS, Linux",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "description": "Umail estrae email da PDF, Excel, CSV, JSON, TXT, URL e cartelle. Rimuove e ripristina duplicati. Esporta in CSV, TXT, JSON."
+    }
+    </script>
 </head>
 <body>
 
@@ -274,43 +401,128 @@
             <div class="badge">In Arrivo</div>
         </nav>
 
-        <!-- Sezione Principale -->
+        <!-- HERO -->
         <main class="hero">
-            <h1 class="title">La tua prossima app.<br>Semplice. Potente.</h1>
-            <p class="subtitle">Scandaglia fiumi di file in secondi. Le tue mail sono qui, pronte ed ordinate.</p>
+            <h1 class="title">Estrattore Email con Rimozione Duplicati</h1>
+            <p class="subtitle">Umail estrae tutte le email da PDF, Excel, CSV, JSON, TXT, da una pagina web o da un'intera cartella. Rimuovi o ripristina i duplicati con un click.</p>
             
             <a href="#iscrizione" class="scroll-btn">Richiedilo ora</a>
 
-            <!-- Finestra Mockup -->
             <div class="gui-container">
                 <div class="window-header">
                     <div class="dot red"></div>
                     <div class="dot yellow"></div>
                     <div class="dot green"></div>
                 </div>
-                <img src="Emailextractor.png" alt="Anteprima dell'interfaccia" class="gui-image">
+                <img src="Emailextractor.png" alt="Interfaccia di Umail: estrattore email con rimozione duplicati" class="gui-image" width="900" height="500" loading="eager">
             </div>
         </main>
 
-        <!-- SEZIONE BLU SCURO (Integrazione Completa) -->
+        <!-- CONTENUTO SEO -->
+        <section class="content-section">
+
+            <div class="author-box">
+                <p><strong>Sviluppato da <a href="https://github.com/therosediamond">[TheRoseDiamond]</a></strong> — sviluppatore indipendente. Ho creato Umail perché nessun estrattore email gestiva bene i duplicati senza perdere l'ordine originale. Contattami: <a href="mailto:tuaemail@esempio.com">tuaemail@esempio.com</a>.</p>
+            </div>
+
+            <h2>Cosa fa Umail</h2>
+            <p>Umail estrae indirizzi email da:</p>
+            <ul>
+                <li><strong>Un singolo URL</strong> — incolla un link, estrae tutte le email presenti nella pagina</li>
+                <li><strong>Un singolo file</strong> — PDF, Excel (.xlsx, .xls), CSV, JSON, TXT</li>
+                <li><strong>Un'intera cartella</strong> — scansiona tutti i file dello stesso tipo al suo interno</li>
+            </ul>
+            <p>I risultati si esportano in <strong>CSV, TXT o JSON</strong>. Umail funziona offline, direttamente sul tuo computer: nessun upload su server esterni, nessun dato che esce dalla tua macchina.</p>
+
+            <h2>Rimozione e ripristino dei duplicati</h2>
+            <p>Dopo l'estrazione, le email duplicate vengono evidenziate direttamente nella GUI. Puoi:</p>
+            <ul>
+                <li>Rimuoverle con un click</li>
+                <li>Ripristinarle se cambi idea (utile per contare quante volte un contatto compare nei tuoi file)</li>
+                <li>Vedere in tempo reale quante email uniche e quante duplicate sono state trovate</li>
+            </ul>
+            <p>La maggior parte dei tool simili elimina i duplicati in modo definitivo. Umail ti lascia il controllo: rimuovi, ripristina, esporta quando sei pronto.</p>
+
+            <h2>Come si usa</h2>
+            <ol>
+                <li>Richiedi Umail via email (form qui sotto)</li>
+                <li>Apri il software sul tuo computer</li>
+                <li>Scegli la fonte: URL, singolo file o cartella</li>
+                <li>Avvia l'estrazione</li>
+                <li>Gestisci i duplicati nella GUI con un click</li>
+                <li>Esporta in CSV, TXT o JSON</li>
+            </ol>
+
+            <h2>Per chi è Umail</h2>
+            <p>Umail è pensato per chi gestisce liste email provenienti da fonti diverse:</p>
+            <ul>
+                <li>Freelance e agenzie che raccolgono contatti da più progetti</li>
+                <li>Commercialisti e consulenti che estraggono email da fatture e documenti PDF</li>
+                <li>Ricercatori che analizzano archivi di file Excel o CSV</li>
+                <li>Chi fa lead generation e ha bisogno di liste pulite e senza duplicati</li>
+                <li>Chi organizza vecchi archivi email in cartelle</li>
+            </ul>
+
+            <h2>Requisiti</h2>
+            <p>Windows, macOS o Linux. Il software funziona offline dopo il download. Non richiede connessione a Internet per l'estrazione.</p>
+
+            <h2>Domande frequenti</h2>
+
+            <div class="faq-item">
+                <h3>Come rimuovo le email duplicate?</h3>
+                <p>Dopo l'estrazione, Umail evidenzia i duplicati nella GUI. Clicca "Rimuovi duplicati" per eliminarli, o "Ripristina" per rimetterli nella lista.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Posso estrarre email da più PDF contemporaneamente?</h3>
+                <p>Sì. Seleziona la cartella che contiene i PDF: Umail scansiona automaticamente tutti i file dello stesso tipo.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>In quali formati posso esportare?</h3>
+                <p>CSV, TXT e JSON. Puoi scegliere il formato prima di salvare il file.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Il software invia i miei dati online?</h3>
+                <p>No. Tutto avviene in locale, sul tuo computer. Nessun upload su server esterni, nessun tracciamento.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Funziona con Excel e CSV?</h3>
+                <p>Sì. Umail estrae email da file .xlsx, .xls, .csv, .json, .txt e .pdf.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Serve una connessione a Internet?</h3>
+                <p>Solo per scaricare il software. Dopo, funziona completamente offline.</p>
+            </div>
+
+            <p class="date-line">Pubblicato: settembre 2026. Ultimo aggiornamento: settembre 2026.</p>
+
+        </section>
+
+        <!-- SEZIONE BLU SCURO - FORM -->
         <section id="iscrizione" class="dark-section">
             <h2>Richiedi l'accesso in anteprima</h2>
-            <p>Inserisci i tuoi dati qui sotto. Sarai tra i primi a provare la potenza di Umail.</p>
+            <p>Inserisci la tua email e ti mando il link per il download di Umail.</p>
 
             <form action="https://formspree.io/f/mrpgnoep" method="POST" class="elegant-form">
                 
                 <div class="form-group">
-                    <label for="email">Your email:</label>
+                    <label for="email">La tua email</label>
                     <input type="email" id="email" name="email" class="elegant-input" placeholder="mario@esempio.com" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="message">Your message:</label>
-                    <textarea id="message" name="message" class="elegant-textarea" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+                    <label for="message">Messaggio (opzionale)</label>
+                    <textarea id="message" name="message" class="elegant-textarea" placeholder="Scrivi qui il tuo messaggio..."></textarea>
                 </div>
 
-                <button type="submit" class="submit-btn">Send</button>
+                <button type="submit" class="submit-btn">Richiedi Umail</button>
             </form>
+
+            <p class="alt-contact">Oppure scrivimi direttamente: <a href="mailto:tuaemail@esempio.com">tuaemail@esempio.com</a></p>
         </section>
 
     </div>
